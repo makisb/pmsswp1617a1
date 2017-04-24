@@ -1,4 +1,37 @@
-# Το αρχείο Turtle του λεξιλογίου RDFS που περιγράφει
-# τις κλάσεις και τις ιδιότητες του ωρολογίου προγράμματος.
+    @prefix uni:  <http://dilab77.ionio.gr/swp/vonitsanos/vocab#> .
+    @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+    @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+    @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+    @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+#Κλάση Διδάσκων
+uni:Tutor rdf:type rdfs:Class . 
+uni:Tutor rdfs:label " A classification of all tutors" .
+foaf:Person Tutor rdfs:Class .
+#Κλάση Διάλεξη
+uni:Lecture rdf:type rdfs:Class . 
+uni:Lecture rdfs:label " A classification of all lectures" .
+#Κλάση Αίθουσα
+uni:Classroom rdf:type rdfs:Class . 
+uni:Classroom rdfs:label " A classification of all classrooms" .
+#Κλάση Μ΄άθημα
+uni:Lesson rdf:type rdfs:Class . 
+uni:Lesson rdfs:label " A classification of all lessons" .
+
+uni:Tutorname rdf:type rdf:Property .
+uni:Tutorname rdfs:domain ldt:Tutor .
+uni:Tutorname rdfs:range rdfs:Literal . 
+
+uni:Lecturename rdf:type rdf:Property .
+uni:Lecturename rdfs:domain ldt:Lecture .
+uni:Lecturename rdfs:range rdfs:Literal . 
+
+uni:Classroomname rdf:type rdf:Property .
+uni:Classroomname rdfs:domain ldt:Classroom .
+uni:Classroomname rdfs:range rdfs:Literal . 
+
+uni:Lessonname rdf:type rdf:Property .
+uni:Tutorname rdfs:domain ldt:Tutor .
+uni:Lessonname rdfs:range rdfs:Literal . 
 
 
